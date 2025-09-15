@@ -1,0 +1,66 @@
+.blog-details {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-details-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.blog-details-image {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-details-info {
+  flex: 1;
+}
+
+.blog-details-info h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.blog-category,
+.product-price {
+  font-size: 1.2rem;
+  color: #2ecc71;
+  margin: 0.5rem 0;
+}
+
+.blog-date,
+.product-date {
+  font-size: 0.9rem;
+  color: #999;
+  margin: 0.5rem 0;
+}
+
+.blog-content,
+.product-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.blog-loading,
+.blog-error {
+  margin: 4rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}

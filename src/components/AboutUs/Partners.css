@@ -1,0 +1,207 @@
+/* InstitutionalPartners.css */
+.institutional-partners {
+  padding: 100px 20px;
+  background-color: #f9fbfd;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #0a2540;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #5e7a90;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: #44c2c7;
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 15px 50px rgba(10, 37, 64, 0.08);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.partner-card:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 25px 60px rgba(10, 37, 64, 0.15);
+}
+
+.logo-container {
+  height: 200px;
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.03) 0%, rgba(68, 194, 199, 0.03) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-container::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0a2540, #44c2c7);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.partner-card:hover .logo-container::before {
+  transform: scaleX(1);
+}
+
+.partner-logo {
+  max-width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  transition: all 0.5s ease;
+  filter: grayscale(100%) contrast(0.8);
+  opacity: 0.9;
+}
+
+.partner-card:hover .partner-logo {
+  filter: grayscale(0) contrast(1);
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.partner-info {
+  padding: 30px;
+  text-align: center;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.partner-info h3 {
+  font-size: 1.4rem;
+  color: #0a2540;
+  margin-bottom: 10px;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.partner-card:hover .partner-info h3 {
+  color: #44c2c7;
+}
+
+.partner-info p {
+  font-size: 1.1rem;
+  color: #5e7a90;
+  margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .institutional-partners {
+    padding: 80px 20px;
+  }
+  
+  .partners-grid {
+    gap: 30px;
+  }
+  
+  .logo-container {
+    height: 180px;
+  }
+  
+  .partner-info {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .section-header p {
+    font-size: 1.1rem;
+  }
+  
+  .partners-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .partner-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .institutional-partners {
+    padding: 60px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  .logo-container {
+    height: 160px;
+    padding: 20px;
+  }
+  
+  .partner-logo {
+    max-height: 80px;
+  }
+  
+  .partner-info {
+    padding: 20px;
+  }
+  
+  .partner-info h3 {
+    font-size: 1.2rem;
+  }
+  
+  .partner-info p {
+    font-size: 1rem;
+  }
+}

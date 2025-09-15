@@ -1,0 +1,165 @@
+.mission-vision-background {
+  padding: 3rem 1rem;
+  background-color: #f8fafc;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.section-header h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  color: #44c2c7;
+  margin-bottom: 1rem;
+}
+
+.divider {
+  width: 60px;
+  height: 3px;
+  background: #44c2c7;
+  margin: 0 auto;
+  border-radius: 1.5px;
+}
+
+.cards-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bottom-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.background-card {
+  max-width: 100%;
+}
+
+.background-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #44c2c7;
+  margin-bottom: 1rem;
+}
+
+.mission-card, .vision-card {
+  min-width: 300px;
+}
+
+.icon-container {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #e0e0e0 0%, #aeb3ba 100%);
+}
+
+.icon-container svg {
+  width: 32px;
+  height: 32px;
+  stroke: #44c2c7;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #44c2c7;
+  margin-bottom: 0.75rem;
+}
+
+.card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5e76;
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+  }
+
+  .background-card h3 {
+    font-size: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.4rem;
+  }
+
+  .card p {
+    font-size: 0.95rem;
+  }
+
+  .icon-container {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-container svg {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .card h3 {
+    font-size: 1.3rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .icon-container {
+    width: 45px;
+    height: 45px;
+  }
+
+  .icon-container svg {
+    width: 24px;
+    height: 24px;
+  }
+}

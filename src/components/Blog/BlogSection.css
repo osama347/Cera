@@ -1,0 +1,95 @@
+.blog-section {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.blog-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.blog-grid,
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.blog-card,
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.blog-card:hover,
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card-image,
+.product-card-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-card-content,
+.product-card-content {
+  padding: 1rem;
+}
+
+.blog-card-content h3,
+.product-card-content h3 {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem;
+  color: #333;
+}
+
+.blog-card-date,
+.product-card-price {
+  font-size: 1.2rem;
+  color: #2ecc71;
+  margin: 0.5rem 0;
+}
+
+.blog-card-excerpt,
+.product-card-description {
+  font-size: 1rem;
+  color: #666;
+  margin: 0.5rem 0;
+}
+
+.blog-card-link,
+.product-card-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: #44c2c7;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  transition: background 0.2s;
+}
+
+.blog-card-link:hover,
+.product-card-link:hover {
+  background: #0056b3;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}

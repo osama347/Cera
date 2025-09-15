@@ -1,0 +1,251 @@
+/* CoreValuesSection.css */
+.core-values-section {
+  padding: 100px 20px;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #0a2540;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #5e7a90;
+  margin-bottom: 1.5rem;
+}
+
+.divider {
+  width: 80px;
+  height: 4px;
+  background: #44c2c7;
+  margin: 0 auto;
+  border-radius: 2px;
+  animation: growWidth 1s ease-out 0.5s forwards;
+  transform-origin: left;
+}
+
+@keyframes growWidth {
+  from { width: 0; }
+  to { width: 80px; }
+}
+
+.values-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow-x: auto;
+  padding: 20px 0;
+  scrollbar-width: thin;
+  scrollbar-color: #44c2c7 #f0f0f0;
+}
+
+.values-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.values-container::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 10px;
+}
+
+.values-container::-webkit-scrollbar-thumb {
+  background-color: #44c2c7;
+  border-radius: 10px;
+}
+
+.value-card {
+  background: #f9fbfd;
+  border-radius: 15px;
+  padding: 40px 10px;
+  text-align: center;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid #eef2f6;
+  position: relative;
+  overflow: hidden;
+  min-width: 280px;
+  max-width: 280px;
+  flex: 0 0 auto;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: cardEntry 0.8s ease-out forwards;
+  animation-delay: calc(0.2s * var(--i));
+}
+
+@keyframes cardEntry {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.value-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #0a2540, #44c2c7);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(10, 37, 64, 0.15);
+}
+
+.value-card:hover::before {
+  transform: scaleX(1);
+}
+
+.icon-wrapper {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.05) 0%, rgba(68, 194, 199, 0.05) 100%);
+  border-radius: 50%;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: scale(0.95);
+}
+
+.value-card:hover .icon-wrapper {
+  background: linear-gradient(135deg, #0a2540 0%, #44c2c7 100%);
+  transform: scale(1.1);
+}
+
+.icon-wrapper svg {
+  width: 40px;
+  height: 40px;
+  stroke: #44c2c7;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-card:hover .icon-wrapper svg {
+  stroke: white;
+  transform: scale(1.15);
+}
+
+.value-card h3 {
+  font-size: 1.5rem;
+  color: #0a2540;
+  margin-bottom: 15px;
+  font-weight: 700;
+  transition: color 0.4s ease;
+}
+
+.value-card:hover h3 {
+  color: #44c2c7;
+}
+
+.value-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #5e7a90;
+  margin: 0;
+  transform: translateY(10px);
+  opacity: 0.9;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.value-card:hover p {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .values-container {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 992px) {
+  .core-values-section {
+    padding: 80px 20px;
+  }
+  
+  .value-card {
+    padding: 35px 25px;
+    min-width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+  
+  .section-header p {
+    font-size: 1.1rem;
+  }
+  
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .icon-wrapper svg {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .core-values-section {
+    padding: 60px 15px;
+  }
+  
+  .section-header h2 {
+    font-size: 2rem;
+  }
+  
+  .section-header p {
+    font-size: 1rem;
+  }
+  
+  .value-card {
+    padding: 30px 20px;
+    min-width: 240px;
+  }
+  
+  .value-card h3 {
+    font-size: 1.4rem;
+  }
+  
+  .value-card p {
+    font-size: 1rem;
+  }
+}

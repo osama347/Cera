@@ -1,0 +1,185 @@
+.admin-dashboard {
+  max-width: 1400px; /* Increased to accommodate wider table */
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.admin-dashboard h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.admin-dashboard h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard form {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.admin-dashboard label {
+  font-size: 1rem;
+  color: #333;
+  font-weight: 600;
+}
+
+.admin-dashboard input,
+.admin-dashboard textarea {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 0.5rem;
+}
+
+.admin-dashboard button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toolbar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.toolbar-btn {
+  background: #e5e7eb;
+  border: 1px solid #d1d5db;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.toolbar-btn:hover {
+  background: #d1d5db;
+}
+
+.toolbar-btn:disabled {
+  background: #f3f4f6;
+  cursor: not-allowed;
+}
+
+.mini-btn {
+  padding: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.editor {
+  border: 1px solid #ccc;
+  min-height: 200px;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.editor:focus {
+  outline: none;
+  border-color: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.2);
+}
+
+.editor:empty:before {
+  content: attr(data-placeholder);
+  color: #9ca3af;
+}
+
+.blog-table,
+.product-table,
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.blog-table th,
+.blog-table td,
+.product-table th,
+.product-table td,
+.payment-table th,
+.payment-table td {
+  padding: 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.payment-table th:nth-child(1),
+.payment-table td:nth-child(1) {
+  width: 20%; /* User Info column */
+}
+
+.payment-table th:nth-child(2),
+.payment-table td:nth-child(2) {
+  width: 25%; /* Cart Items column */
+}
+
+.payment-table th:nth-child(3),
+.payment-table td:nth-child(3) {
+  width: 15%; /* Payment Method column */
+}
+
+.payment-table th:nth-child(4),
+.payment-table td:nth-child(4) {
+  width: 10%; /* Transaction ID column */
+}
+
+.payment-table th:nth-child(5),
+.payment-table td:nth-child(5) {
+  width: 10%; /* Status column */
+}
+
+.payment-table th:nth-child(6),
+.payment-table td:nth-child(6) {
+  width: 10%; /* Created At column */
+}
+
+.payment-table th:nth-child(7),
+.payment-table td:nth-child(7) {
+  width: 10%; /* Transaction Image column */
+}
+
+.payment-table th:nth-child(8),
+.payment-table td:nth-child(8) {
+  width: 10%; /* Report Link column */
+}
+
+.payment-table th:nth-child(9),
+.payment-table td:nth-child(9) {
+  width: 10%; /* Actions column */
+}
+
+.blog-table th,
+.product-table th,
+.payment-table th {
+  background: #f9fafb;
+  font-weight: 600;
+  color: #333;
+}
+
+.text-red-500 {
+  color: #ef4444;
+}
+
+.text-blue-500 {
+  color: #3b82f6;
+}
+
+.text-green-500 {
+  color: #22c55e;
+}
